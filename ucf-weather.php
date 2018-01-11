@@ -2,7 +2,7 @@
 /*
 Plugin Name: UCF Weather Shortcode
 Description: Provides a shortcode for displaying the current weather using the UCF Weather service.
-Version: 1.0.0
+Version: 1.0.1
 Author: UCF Web Communications
 License: GPL3
 */
@@ -44,7 +44,7 @@ if ( ! function_exists( 'ucf_weather_init' ) ) {
 	/**
 	 * Called when all plugins are loaded.
 	 * Add all actions and hooks here.
-	 * 
+	 *
 	 * @author Jim Barnes
 	 * @since 1.0.0
 	 **/
@@ -58,10 +58,6 @@ if ( ! function_exists( 'ucf_weather_init' ) ) {
 		add_action( 'init', array( 'UCF_Weather_Shortcode', 'register_shortcode' ) );
 		// Add frontend assets
 		add_action( 'wp_enqueue_scripts', array( 'UCF_Weather_Config', 'enqueue_frontend_assets' ), 10, 0 );
-		// If `WP-Shortcode-Interface` plugin is installed, register interface.
-		if ( is_plugin_active( 'WP-Shortcode-Interface/wp-shortcode-interface.php' ) ) {
-			//add_action( 'wp_scif_add_shortcode', array( 'UCF_Weather_Shortcode', 'register_shortcode_interface' ), 10, 1 );
-		}
 	}
 
 	add_action( 'plugins_loaded', 'ucf_weather_init' );
