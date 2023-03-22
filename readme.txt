@@ -2,8 +2,8 @@
 Contributors: ucfwebcom
 Tags: ucf, weather, shortcode
 Requires at least: 4.5.3
-Tested up to: 4.7.3
-Stable tag: 1.1.0
+Tested up to: 6.1
+Stable tag: 1.1.2
 License: GPLv3 or later
 License URI: http://www.gnu.org/copyleft/gpl-3.0.html
 
@@ -28,6 +28,15 @@ Provides a shortcode for displaying weather from the UCF weather service.
 
 
 == Changelog ==
+
+= 1.1.2 =
+Enhancements:
+* Added composer file.
+
+= 1.1.1 =
+Bug Fixes:
+* Remove id attribute from the weather SVGs in https://github.com/UCF/UCF-Weather-Shortcode/pull/25
+* Update packages & fix eslint errors in https://github.com/UCF/UCF-Weather-Shortcode/pull/24
 
 = 1.1.0 =
 Enhancements:
