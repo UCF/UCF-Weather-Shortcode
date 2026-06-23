@@ -16,11 +16,17 @@ if ( ! class_exists( 'UCF_Weather_Block' ) ) {
 				return;
 			}
 
+			if( ! function_exists('get_plugin_data') ){
+				require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+			}
+
+			$version = get_plugin_data( UCF_WEATHER__PLUGIN_FILE )['Version'];
+
 			wp_register_script(
 				'ucf-weather-block',
 				UCF_WEATHER__SCRIPT_URL . '/ucf-weather-block.js',
 				array( 'wp-blocks', 'wp-element', 'wp-block-editor', 'wp-components', 'wp-server-side-render', 'wp-i18n' ),
-				false,
+				$version,
 				true
 			);
 
