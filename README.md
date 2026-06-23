@@ -26,7 +26,7 @@ Provides a shortcode for displaying weather from the UCF weather service.
 Enhancements:
 * Added composer file.
 
-### 1.1.1. ###
+### 1.1.1 ###
 Bug Fixes:
 * Remove id attribute from the weather SVGs in https://github.com/UCF/UCF-Weather-Shortcode/pull/25
 * Update packages & fix eslint errors in https://github.com/UCF/UCF-Weather-Shortcode/pull/24
