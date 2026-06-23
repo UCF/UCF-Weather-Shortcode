@@ -78,7 +78,7 @@
 } )(
 	window.wp.blocks,
 	window.wp.element,
-	window.wp.blockEditor,
+	window.wp.blockEditor || window.wp.editor,
 	window.wp.components,
 	window.wp.serverSideRender,
 	window.wp.i18n

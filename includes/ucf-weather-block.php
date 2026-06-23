@@ -54,11 +54,16 @@ if ( ! class_exists( 'UCF_Weather_Block' ) ) {
 		 * @return string | The markup to be displayed.
 		 **/
 		public static function callback( $atts ) {
-			$atts = wp_parse_args( $atts, array(
+			$atts = wp_parse_args( (array) $atts, array(
 				'feed'   => 'default',
 				'layout' => 'default',
 				'theme'  => 'default',
 			) );
+
+			// Sanitize/normalize block attributes before rendering.
+			$atts['feed']   = in_array( $atts['feed'], array( 'default', 'today', 'extended' ), true ) ? $atts['feed'] : 'default';
+			$atts['layout'] = sanitize_key( $atts['layout'] );
+			$atts['theme']  = sanitize_key( $atts['theme'] );
 
 			return UCF_Weather_Common::display_weather( $atts );
 		}
