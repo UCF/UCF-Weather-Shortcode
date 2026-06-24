@@ -23,6 +23,7 @@ define( 'UCF_WEATHER__IMAGES_DIR', UCF_WEATHER__STATIC_DIR . 'img/' );
 include_once UCF_WEATHER__PLUGIN_DIR . 'includes/ucf-weather-config.php';
 include_once UCF_WEATHER__PLUGIN_DIR . 'includes/ucf-weather-feed.php';
 include_once UCF_WEATHER__PLUGIN_DIR . 'includes/ucf-weather-shortcode.php';
+include_once UCF_WEATHER__PLUGIN_DIR . 'includes/ucf-weather-block.php';
 include_once UCF_WEATHER__PLUGIN_DIR . 'includes/ucf-weather-common.php';
 include_once UCF_WEATHER__PLUGIN_DIR . 'admin/ucf-weather-admin.php';
 
@@ -58,6 +59,8 @@ if ( ! function_exists( 'ucf_weather_init' ) ) {
 
 		// Register the shortcode
 		add_action( 'init', array( 'UCF_Weather_Shortcode', 'register_shortcode' ) );
+		// Register the block
+		add_action( 'init', array( 'UCF_Weather_Block', 'register_block' ) );
 		// Add frontend assets
 		add_action( 'wp_enqueue_scripts', array( 'UCF_Weather_Config', 'enqueue_frontend_assets' ), 10, 0 );
 	}
