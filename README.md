@@ -22,6 +22,10 @@ Provides a shortcode for displaying weather from the UCF weather service.
 
 ## Changelog ##
 
+### 1.2.0 ###
+Enhancements:
+* Added weather block with 3 main variants.
+
 ### 1.1.2 ###
 Enhancements:
 * Added composer file.
